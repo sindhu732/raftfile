@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Rafts</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/submit/assets/css/submit.css">
+    <link rel="stylesheet" href="/system/assets/css/common.css">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div class="main-bg-container">
+        <div ng-controller="reportExtractorController as extractor">
+            <input ng-model="fromDate" type="text" placeholder="From Date">
+            <input ng-model="toDate" type="text" placeholder="To Date">
+            <button ng-click="generateReport()">Generate</button>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
