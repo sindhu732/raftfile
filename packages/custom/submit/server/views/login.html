@@ -15,12 +15,8 @@
     <header>
 
     </header>
-    <div class="main-bg-container">
-        <div ng-controller="loginController as login">
-            <input ng-model="userName" type="text" placeholder="User Name">
-            <input ng-model="password" type="password" placeholder="Password">
-            <button ng-click="generateReport()">login</button>
-        </div>
+    <div class="main-bg-container" ng-controller="AuthController as auth">
+        <a href="/api/submit/generateReport" ng-click="auth.handleAuth()">click</a>
     </div>
     <footer>
 

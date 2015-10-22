@@ -17,7 +17,7 @@ module.exports = {
   },
   strategies: {
       local: {
-        enabled: true
+        enabled: false
       },
       facebook: {
         clientID: 'DEFAULT_APP_ID',
@@ -40,8 +40,8 @@ module.exports = {
       google: {
         clientID: 'DEFAULT_APP_ID',
         clientSecret: 'APP_SECRET',
-        callbackURL: 'http://localhost:3000/api/auth/google/callback',
-        enabled: false
+        callbackURL: 'http://localhost:3000/submit/example/render',
+        enabled: true
       },
       linkedin: {
         clientID: 'DEFAULT_API_KEY',

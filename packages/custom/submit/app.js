@@ -20,12 +20,12 @@ Submit.register(function(app, auth, database) {
   Submit.menus.add({
     title: 'Submit Page',
     link: 'submit example page',
-    roles: ['authenticated'],
+    roles: ['all'],
     menu: 'main'
   }).add({
     title: 'Submit Landing',
     link: 'submit landing',
-    roles: ['authenticated'],
+    roles: ['all'],
     menu: 'main'
   });
   

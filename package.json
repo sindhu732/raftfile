@@ -20,8 +20,8 @@
   "dependencies": {
     "assetmanager": "latest",
     "async": "latest",
-    "bower": "latest",
     "body-parser": "latest",
+    "bower": "latest",
     "compression": "latest",
     "connect-flash": "latest",
     "consolidate": "latest",
@@ -29,6 +29,7 @@
     "errorhandler": "latest",
     "express": "latest",
     "forever": "latest",
+    "googleapis": "^2.1.5",
     "gridfs-stream": "latest",
     "jsonwebtoken": "latest",
     "lodash": "latest",
