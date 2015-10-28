@@ -15,9 +15,9 @@ var BillSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    expenseDate:{
-        type:Date,
-        default:Date.now
+    expenseDate: {
+        type: Date,
+        default: Date.now
     },
     description: {
         type: String,

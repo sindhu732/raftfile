@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Description</th>
+      <th>Receipt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="bill in bills">
+      <td>{{bill.date}}</td>
+      <td>{{bill.amount}}</td>
+      <td>{{bill.description}}</td>
+      <td><img src="{{bill.imageUrl}}" alt=""></td>
+    </tr>
+  </tbody>
+</table>

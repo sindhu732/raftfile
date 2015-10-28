@@ -6,17 +6,18 @@ var Bill = mongoose.model('Bill');
 
 module.exports = function(app) {
     return {
-        fetchBills: function(app, res, req, db) {
-            var bills = Bill.find();
-            res.sendJSON(bills);
+        fetchBills: function(app, req, res, sendHTML) {
+            Bill.find({},function(err,bills){
+                sendHTML(bills);
+            });
         },
-        saveBill: function(app, res, req, db) {
+        saveBill: function(app, req, res, db) {
             var bill = new Bill({
                 amount: 200,
                 description: 'test'
             });
-            debugger;
             bill.save(function(err) {
+                console.log('inside call back');
                 if (err) {
                     res.json(err);
                     res.status(404);
@@ -24,7 +25,8 @@ module.exports = function(app) {
                 }
                 res.json({
                     ok: 'ok'
-                }).status(200);
+                });
+                res.status(200);
 
             });
         }

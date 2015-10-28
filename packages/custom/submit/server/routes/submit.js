@@ -28,12 +28,18 @@ module.exports = function(Submit, app, auth, database) {
 
     app.get('/api/submit/fetchBills/render', function(req, res, next) {
         var bills = require('../controllers/bills')(app);
-        console.log(database);
-        var bills = bills.fetchBills(app, req, res, database);
+        var sendHTML = function(bills) {
+            Submit.render('bills', {
+                package: 'submit',
+                data: bills
+            }, function(err, html) {
+                res.send(html)
+            })
+        }
+        bills.fetchBills(app, req, res, sendHTML);
     })
     app.get('/api/submit/save/render', function(req, res, next) {
         var bills = require('../controllers/bills')(app);
-        console.log(database);
         var bills = bills.saveBill(app, req, res, database);
     })
 

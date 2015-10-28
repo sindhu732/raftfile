@@ -1,0 +1,12 @@
+<h1>This is rendered from the package itself.</h1>
+<h2>The package uses swig by default</h2>
+
+<ul>
+{% for bill in data %}
+	<li>
+		<p>{{bill.amount}}</p>
+		<p>{{bill.description}}</p>
+	</li>
+{% endfor %}
+</ul>
+<img href="http://mean.io" src="/{{package}}/assets/img/logo.png" />

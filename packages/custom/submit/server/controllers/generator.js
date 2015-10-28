@@ -9,7 +9,7 @@ module.exports = function(app) {
             phantom.create(function(ph) {
                 ph.createPage(function(page) {
                     var file = "/tmp/file.pdf";
-                    page.open("http://www.google.com", function(status) {
+                    page.open("http://localhost:3000/api/submit/fetchBills/render", function(status) {
                         page.render(file, {
                             format: 'pdf',
                             quality: '100'

@@ -1,18 +1,46 @@
-<div class="" data-ng-controller="SubmitController">
-  <h1>Example view from your new awesome package</h1>
-  <h2>Package: {{package.name}}</h2>
-  <ol>
-    <li>
-      <a href="/api/submit/example/render" target="_self">Submit Landing</a>
-    </li>
-  </ol>
-  <h3><img src="/submit/assets/img/logo.png" /></h3>
-  </br>
-  <p class="alert alert-info">You can find your package in /packages/submit</p>
-  </br>
-  <p class="alert alert-warning">MEAN versions prior to 0.3.2 will be in /node_modules/submit</p>
-  </br>
-  <h3><a href="http://learn.mean.io">Documentation</a></h3>
-  </br>
-</div>
-
+<section data-ng-controller="SubmitController as submit">
+  <div class="container-wrapper">
+    <!-- <div class='input-group date' id='fromDatePicker'>
+      <input type='text' placeholder="From Date" data-ng-model="fromDate" class="form-control" />
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div> -->
+    <div class="row">
+      <h4>Dig some bills you saved from the app
+        <br/>
+        <small>If you haven't. Charity is always appreciated :)</small>
+      </h4>
+    </div>
+    <div class="row filter-container">
+      <div class="col-md-3 ">
+        <p class="input-group">
+          <input type="text" placeholder="From Date" class="form-control" datepicker-popup="{{format}}" ng-model="fromDate" is-open="status.opened2" min-date="minDate" max-date="'2020-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true"
+          close-text="Close" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="status.opened2=true"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+      <div class="col-md-3 text-center ">
+        <span class="lead">
+          <small>To</small>
+        </span>
+      </div>
+      <div class="col-md-3 ">
+        <p class="input-group">
+          <input type="text" placeholder="Till Date" class="form-control" datepicker-popup="{{format}}" ng-model="toDate" is-open="status.opened" min-date="minDate" max-date="'2020-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true"
+          close-text="Close" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+      <div class="col-md-3 ">
+        <button type="button" class="btn btn-info pull-right" ng-click="go()">Get em!</button>
+      </div>
+    </div>
+  </div>
+  <div ui-view>
+  </div>
+</section>
