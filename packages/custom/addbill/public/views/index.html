@@ -1,0 +1,29 @@
+<div ng-controller='MainController' ng-init="total=0;"> <!-- landctrl -->
+
+	Total Amount to Claim: {{ total }}
+	<form enctype="multipart/form-data" method="post" name="form">
+		Image of Bill<div class="button" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100" ngf-resize="{width: 250, height: 250}">Select</div>
+		Amount <input ng-model="amount" type="number"/> <br>
+		Details <input ng-model="detail" type="text"/> <br>
+		Date <input ng-model="date" type="date"/> <br>
+    <button type="submit" ng-click="upload(file)">submit</button>
+	</form>
+
+	<br>
+		{{ newbill }}
+	<br>
+
+    Claim Bills <br>
+	From Date <input ng-model="fromdate" type="date"/> <br>
+	To Date <input ng-model="todate" type="date"/> <br>
+	<button type="submit" ng-click="claim()">Claim Bills</button>
+	<br>
+	<div ng-repeat="bill in bills | filter: {claimed: false}" ng-init="$scope.total = total + bill.amount">
+		{{ bill.billImage }}
+		{{ bill.amount }} 
+		{{ bill.detail }}
+		{{ bill.date | date}}
+	</div>
+	<br>
+
+</div>

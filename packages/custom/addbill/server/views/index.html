@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Mrio 21st Oct </title>
+	<script type="text/javascript" src="../controllers/angular.min.js"></script>
+	<script type="text/javascript" src="../controllers/app.js"></script>
+</head>
+<body ng-app="mrio3">
+	<form ng-controller="add_newbill" method="post">
+		Image of Bill <input name="bill_image" type="text"/> <br>
+		Amount <input name="amount" type="text"/> <br>
+		Details <input name="detail" type="text"/> <br>
+		Date <input name="date" type="date"/> <br>
+		<input type="submit" value="submit"/>
+	</form>
+	<!-- DOn't use templating engine -->
+	<div ng-controller="unclaimed_bills">
+	<div ng-repeat="bill in bills">
+		{{ bill.bill_image }} jj
+	</div>
+	</div>
+	rcdryc
+</body>
+</html>
