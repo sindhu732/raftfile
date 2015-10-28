@@ -1,0 +1,148 @@
+html {
+	font-size : 10px;
+}
+
+.openSans { font-family : Open Sans; }
+.centerAlign {
+	display: flex;
+	justify-content : center;
+	align-items : center;
+}
+.verticalCenter {
+	display : -webkit-flex;
+	display : flex;
+	align-items : center;
+	-webkit-align-items : center;
+}
+.rightCenter {
+	display : flex;
+	margin-left : auto; margin-right : 0!important;
+}
+
+input { border : 0; background : transparent; }
+
+#container { overflow : hidden; position : absolute; top: 15vw;
+	position : relative; top : 15vw;
+	padding : 3vw;
+}
+
+#head {
+	position : fixed; top : 0;
+	height : 15vw; width : 100vw;
+	background-color : #ffffff;
+	font-size : 8vw; color : #4a4a4a;
+	padding : 0 !important; margin : 0 !important;
+	z-index : 2;
+	color: #00BCD4;
+}
+.logo { background : url( '../images/logo.png' );
+	background-repeat : no-repeat; background-size : 100% auto; 
+	background-size : contain;
+	width : 60%; height : 40%; }
+
+body { 
+	background-color : #D8D6DA; color : #66459B;
+}
+#event {
+	height : 48vw;
+	padding : 4vw;
+	background-color : #ffffff;
+	margin-bottom : 3vw;
+}
+
+#eventWrap { margin : 3vw; }
+#amount {
+	height : 12vw; width : 100%;
+	margin-bottom : 3vw;
+	font-size : 5vw;
+	display : flex;
+}
+	#amountIcon { width : 7vw; height : 9vw; float : left; padding-top : 2vw;
+			font-size : 7vw; }
+	#amountText { width : 40vw; float : left;}
+	#amount .mdl-textfield { width : 100%; }
+	
+#attach { margin-left : auto; }
+.iconSize { font-size : 7vw; color : rgb( 90s, 90, 90 ); }
+
+.mdl-button--fab{ margin-left : auto; margin-right : 0; }
+#image {
+	height : 35vw; width : 96vw;
+	background: url( '../images/bill.jpg' );
+	background-repeat : no-repeat; background-size : 96vw auto;
+	display : flex;
+	color : #ffffff; font-size : 7vw;
+}
+
+#detail {
+	width : 100%; height : 20vw; margin-bottom : 3vw;
+	border : 0.2vw solid rgb( 122, 122, 122 );
+	overflow : hidden;
+}
+	#detailText { height : 17vw; width : 85vw; margin-left: 3vw; margin-top : 1vw; }
+	#detail .mdl-textfield { width : 100%; height : 100%; }
+	#detail .mdl-textfield__content{  font-size : 10vw; }
+
+
+#date {
+	height : 7vw; width : 36vw;
+	margin-left : 60vw;
+	font-size : 4vw;
+	border-bottom : 0.2vw solid #A9A9A9;
+}
+.mdl-button { width : 11vw; height : 10vw; }
+	#dateText { width : 36vw; }
+}
+
+#save {
+	height : 12vw;  width : 12vw;
+	margin-left : auto; margin-top: 1vw;
+	font-size : 5vw;
+	color : #000066 !important;
+}
+	#saveText { margin-left : 5vw; }
+
+/* =========================== Lists / tiles ======================== */
+
+#recent {
+	height : 5vw; width : 94vw;
+	padding : 2vw;
+	font-size : 4vw;
+	color : rgb( 120, 120, 120 );
+}
+	#recentText { margin-left : 2vw; }
+
+#tile {
+	height : 7vw; width : 100%vw;
+	margin-left : 0vw;
+	border-bottom : 0.3vw solid #A9A9A9;
+	font-size : 3vw;
+	background-color : #ffffff;
+	overflow : hidden;
+	padding : 3vw 0;
+}
+
+.tileCommon { 
+	overflow : hidden ; text-overflow : ellipsis; line-height: 8vw; font-size : 4vw; }
+#tileAmount { width : 25vw;
+	float : left;}
+#tileDetail { width : 30vw;
+	margin-left : 3vw;
+	float : left; }
+#tileDate { width : 33vw;
+	margin-left : 60vw; }
+
+/* =========================== Event Page ========================== */
+
+
+.mdl-layout {
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.mdl-layout__content {
+	padding : 0;
+	flex: none;
+}
+.mdl-layout__container { width : 100%; height : auto; }
+.mdl-textfield__input { font-size : 5vw; }
+.mdl-textfield__label { font-size : 5vw; }
