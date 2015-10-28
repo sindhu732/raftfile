@@ -48,6 +48,7 @@
     "passport-linkedin": "latest",
     "passport-local": "latest",
     "passport-twitter": "latest",
+    "phantom": "^0.8.0",
     "request": "latest",
     "serve-favicon": "latest",
     "shelljs": "latest",
