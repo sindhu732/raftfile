@@ -1,0 +1,71 @@
+
+<div ng-app = "App" ng-controller = "landCtrl" id = "container"y>
+	
+<!-- Creating Event -->
+
+<div id = "event" class = "mdl-color--white mdl-shadow--2dp">
+		<div id = "amount" class = "verticalCenter">
+		<span id = "amountIcon" class = "verticalCenter"> <i class = "fa fa-rupee fa-1x"> </i> </span>
+		<div id = "amount">
+			<form action="#">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="number" id = "username"/>
+					<label class="mdl-textfield__label" for="number"> Amount </label>
+				</div>
+			</form>
+		</div>
+		
+		<div id = "save" class = "mdl-right">
+    		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+				<i class = "fa iconSize centerAlign"> </i>save
+			</button>
+		</div>
+		
+	</div>
+
+    <div class = "mdl-layout mdl-js-textfield" id = "detail">
+    	
+		<div id = "detail" class = "mdl-layout__content">
+			<form action="#">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" rows = "2"/>
+					<label class="mdl-textfield__label" for="text"> Description </label>
+				</div>
+			</form>
+		</div>
+
+    </div>
+
+    <div id = "attach" class = "verticalCenter mdl-button--fab">
+    	<button class="mdl-button mdl-js-button mdl-button--fab" id = "attach">
+			<i class="material-icons"> <i class = "fa fa-paperclip centerAlign"></i> </i>
+		</button>
+    </div>
+</div>
+	
+<div id = "tileWrap">
+	<div id = "recent">
+		<span id = "recentText"> Recent bills </span>
+	</div>
+
+	<div class = "mdl-shadow--2dp mdl-color--white">
+	    
+		<div id = "tile" ng-repeat = "item in tiles" ng-class = "mdl-shadow--3dp verticalAlign" ng-click = "toEvent( item.id ); tileStyle = {'height':'20vw'}" ng-style = "tileStyle">
+			<div id = "tileAmount" class = "tileCommon centerAlign">
+				<i class = "fa fa-rupee fa-1x"> </i> &nbsp;
+				{{ tiles[ tiles.length - $index - 1 ].amount }}
+			</div>
+			<div id = "tileDetail" class = "tileCommon"> {{tiles[tiles.length - $index - 1 ].tag}} </div>
+			<div id = "tileDate" class = "tileCommon centerAlign"> {{tiles[tiles.length - $index - 1 ].date}} </div>
+			
+		</div>
+
+	</div>
+</div>
+          
+    
+    
+
+  </div>
+
+</div>
