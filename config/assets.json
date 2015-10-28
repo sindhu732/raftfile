@@ -8,7 +8,7 @@
     "js": {
       "bower_components/build/js/dist.min.js": [
         "bower_components/jquery/dist/jquery.min.js",
-        "bower_components/angular/angular.min.js",
+        "bower_components/angular/angular.js",
         "bower_components/angular-mocks/angular-mocks.js",
         "bower_components/angular-cookies/angular-cookies.min.js",
         "bower_components/angular-resource/angular-resource.min.js",
@@ -17,7 +17,8 @@
         "bower_components/angular-jwt/dist/angular-jwt.min.js",
         "bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
         "bower_components/angular-ui-select/dist/select.min.js",
-        "bower_components/web-bootstrap/index.js"
+        "bower_components/web-bootstrap/index.js",
+        "bower_components/ng-file-upload/ng-file-upload.js"
       ]
     }
   }

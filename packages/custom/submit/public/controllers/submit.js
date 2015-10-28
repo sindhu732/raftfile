@@ -38,7 +38,7 @@ angular.module('mean.submit').controller('SubmitController', ['$scope', 'Global'
 angular.module('mean.submit').controller('BillsController', ['$scope', 'Global', 'Submit', '$stateParams', '$http',
   function($scope, Global, Submit, $stateParams, $http) {
     $http({
-      url: 'http://192.168.1.172:3000/api/addbill/claim',
+      url: '/api/addbill/claim',
       method: 'POST',
       data: {
         fromDate: $stateParams,
