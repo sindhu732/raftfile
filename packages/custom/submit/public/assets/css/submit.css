@@ -1,3 +1,19 @@
 .submit-example h1 {
   background-color: purple
 }
+.filter-container {}
+.filter-container {
+  background: #f6f6f6;
+  padding: 15px;
+}
+@media(min-width:992px) {
+  .filter-container.row .col-md-3:first-child {
+    padding-left: 0;
+  }
+  .filter-container.row .col-md-3{
+    padding-bottom: 0;
+  }
+  .filter-container.row .col-md-3:last-child {
+    padding-right: 0;
+  }
+}
