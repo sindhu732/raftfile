@@ -1,14 +1,14 @@
 {
-  "name": "mean",
+  "name": "raftfile",
   "description": "MEAN.io: A fullstack JavaScript framework powered by MongoDB, ExpressJS, AngularJS, NodeJS.",
-  "version": "0.5.5",
+  "version": "0.1",
   "private": false,
-  "author": "Linnovate <mean@linnovate.net>",
+  "author": "Moonraft <vineeth@moonraft.com>",
   "contributors": "https://github.com/linnovate/mean/graphs/contributors",
   "mean": "0.5.5",
   "repository": {
     "type": "git",
-    "url": "https://github.com/linnovate/mean.git"
+    "url": "https://vineethvijayan@bitbucket.org/vineethvijayan/mriob.git"
   },
   "scripts": {
     "start": "node server",
