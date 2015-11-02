@@ -5,14 +5,46 @@
   background: #f6f6f6;
   padding: 15px;
 }
+.padding-top {
+  padding: 15px 15px 0px 0px;
+}
 @media(min-width:992px) {
   .filter-container.row .col-md-3:first-child {
     padding-left: 0;
   }
-  .filter-container.row .col-md-3{
+  .filter-container.row .col-md-3 {
     padding-bottom: 0;
   }
   .filter-container.row .col-md-3:last-child {
     padding-right: 0;
   }
+  .padding-top {
+    padding-right: 0px;
+  }
+}
+.search-results {
+  padding: 0;
+  margin-top: 15px;
+}
+.search-results li {
+  list-style: none;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 15px 0;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+}
+.search-results li h4.date {
+  display: inline-block;
+}
+.search-results li div.amount {
+  display: inline-block;
+  width: 100%;
+}
+.search-results li div.img {
+  text-align: center;
+  padding-top: 15px;
+}
+.search-results li div.img img {
+  width: 100%;
 }

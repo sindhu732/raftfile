@@ -1,18 +1,23 @@
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Amount</th>
-      <th>Description</th>
-      <th>Receipt</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="bill in bills">
-      <td>{{bill.date}}</td>
-      <td>{{bill.amount}}</td>
-      <td>{{bill.description}}</td>
-      <td><img src="{{bill.imageUrl}}" alt=""></td>
-    </tr>
-  </tbody>
-</table>
+<div class="padding-top row">
+  <div class="col-md-12">
+    <button class="btn btn-primary btn-sm pull-right" ng-show="bills.length>0" ng-click="generateClaim()">Generate Claim</button>
+  </div>
+</div>
+
+
+<ul class="search-results">
+  <li ng-repeat="bill in bills" class="row" ng-click="toggleDisplay($index)">
+    <div class="col-md-6">
+      <h4 class="date">{{bill.date | date:'mediumDate'}}</h4>
+      <div class="amount">{{bill.amount | currency:'&#8377; '}}</div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="description">
+        <small>{{bill.detail}}</small>
+      </h3>
+    </div>
+    <div class="col-md-12 img" ng-show="bill.show">
+      <img ng-src="{{bill.billImage}}" alt="">
+    </div>
+  </li>
+</ul>

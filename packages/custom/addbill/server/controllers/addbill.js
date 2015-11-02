@@ -12,7 +12,7 @@ var atob = require('atob');
 //var cors = require('cors');
 
 module.exports = function(Addbill, database) {
-	return {		
+	return {
 		uploadImg: function(req, res) {
 			var count=0;
 			var form = new multiparty.Form();
@@ -43,10 +43,10 @@ module.exports = function(Addbill, database) {
 				fs.writeFileSync(newPath, atob(buffer), 'binary', function(err) {
 						if (err)
 							console.log('ERR!' + err);
-						else 
+						else
 							console.log('Written to new location !');
 					});
-				savePath = '/addbill/public/uploads/' + file.originalFilename;
+				savePath = '/addbill/uploads/' + file.originalFilename;
 				imagePath = savePath;
 			});
 			form.on('close', function() {
@@ -72,30 +72,21 @@ module.exports = function(Addbill, database) {
 				if (err)
 					console.log(err);
 			});
-			res.header('Content-Type', 'application/json');
-			res.header('Access-Control-Allow-Origin', '*');
 			res.json({'new_bill': newBill});
 		},
-		
+
 		getBills: function(req, res) {
 			// get bill details from database and send to client
 			// limit = 10 ?
 			Bill.find({claimed: false}).sort({date: 'desc'}).exec(function(err, results) {
 				if(err)
-					console.log('ERR! ', err)
-				res.header('Content-Type', 'application/json');
-				res.header('Access-Control-Allow-Origin', '*');
-				res.json({'unclaimedBills': results});
+					console.log('ERR! ', err);
 				//console.log(results)
 				})
 		},
 
 		claimBills: function(req, res) {
 			//console.log('got in');
-			res.header('Content-Type', 'application/json');
-			res.header('Access-Control-Allow-Origin', '*');
-			res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, OPTIONS');
-			res.header('Access-Control-Allow-Headers', '*');
 			console.log(req.body.fromDate);
 			Bill.find({claimed: false, date: {
         				$gte: req.body.fromDate,
@@ -105,9 +96,7 @@ module.exports = function(Addbill, database) {
 					console.log('ERR!' + err);
 				//console.log(res.header('Access-Control-Allow-Origin'));
 				res.json({'unclaimedBills': results});
-			});	
-		}			
-		} 
+			});
+		}
+		}
 	}
-
-

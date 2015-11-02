@@ -49,4 +49,3 @@ module.exports = function(Addbill, app, auth, database) {
     });
   });
 };
-
