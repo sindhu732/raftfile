@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8"/>
+    <title> test 2 </title>
+    <script src = "plugins/angular.js"> </script>
+</head>
+<body ng-app = "App" ng-controller = "ctrl">
+
+<input type = "file" ng-model = "image" onchange = "console.log( 'true' ); check()">
+
+</body>
+<script>
+var app = angular.module( 'App', [] );
+app.controller( 'ctrl', function( $scope ){
+    $scope.check = function() {
+        console.log( $scope.image );
+    }
+});
+</script>
+
+</html>

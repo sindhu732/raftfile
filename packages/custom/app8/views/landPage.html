@@ -1,0 +1,80 @@
+
+<div ng-app = "App" ng-controller = "landCtrl">
+<!-- ng-click = "bodyClick()" but it can't access background, textbox -->
+
+	<div class = "centerAlign md-whiteframe-z2 head">
+		<div class = "logo centerAlign"> logo </div>
+		<div class = "pending centerAlign"> 12345.00 </div>
+	</div>
+
+	<div id = "container">
+		
+	<!-- Creating Event -->
+
+	<div id = "event" class = " md-whiteframe-z3">
+		<div id = "amount" class = "verticalCenter">
+			<div id = "amount">
+				<md-input-container flex class = "detailText">
+	    			<label class = "amountLabel"> Amount </label>
+	    			<input type = "number" ng-model = "models[0]" class = "amountText"/>
+    			</md-input-container>
+			</div>
+		</div>
+
+	    <div class = "mdl-layout mdl-js-textfield detail">
+	    	<md-input-container flex>
+    			<label class = "detailLabel"> Description </label>
+    			<input type = "text" ng-model = "models[1]" class = "detailText"/>
+			</md-input-container>
+		</div>
+	    
+	    <div ng-controller = "UploadController as uploader" class = "verticalCenter eventFoot">
+
+	    	<div class = "centerAlign attach">
+	    		<div class = "centerAlign camera"> <i class = "fa fa-camera centerAlign iconSize"></i> </div>
+	    		<div class = "centerAlign gallery"> <i class = "fa fa-photo centerAlign iconSize"></i> </div>
+    		</div>
+
+    		<div class = "centerAlign save">
+    			<div class = "centerAlign saveButton">
+    				save
+				</div>
+    		</div>
+	    </div>
+
+	</div>
+		
+	<div id = "tileWrap">
+		
+		<div>
+		    	
+			<div ng-repeat = "item in tiles" ng-click = "toEvent( item.id )" class = "tile md-whiteframe-z3 verticalAlign tileCommon tileTransition ng-class: tileClass[ item.id - 1 ]">
+
+				<div class = "tileDate"> {{ tiles[ tiles.length - $index - 1 ].date }} </div>
+
+				<div class = "tileData">
+					<div class = "tileDetail"> {{ tiles[ tiles.length - $index - 1 ].tag }}
+					</div>
+					<div class = "tileAmount"> {{ tiles[ tiles.length - $index - 1 ].amount }}
+					</div>
+					<img class = "tileImg" ng-src = "{{ tiles[ tiles.length - $index - 1 ].img }}"/>
+				</div>
+
+				<img class = "tileImg" ng-src = "{{ tiles[ tiles.length - $index - 1 ].img }}"/>				
+
+				<!--img class = "tileCommon tileImg" ng-src = "{{ tiles[ tiles.length - $index - 1 ].img }}"/>
+				<div class = "tileCommon tileAmount">
+					<i class = "fa fa-rupee fa-1x currency-icon"></i> &nbsp; {{ tiles[ tiles.length - $index - 1 ].amount }}</div>
+				<div class = "tileCommon tileDetail"> {{tiles[tiles.length - $index - 1 ].tag}} </div>
+				<div class = "tileCommon centerAlign tileDate"> {{tiles[tiles.length - $index - 1 ].date}} </div-->
+				
+			</div>
+
+		</div>
+
+	</div>
+
+
+	</div>
+
+</div>

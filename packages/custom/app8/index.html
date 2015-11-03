@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Mrio 1 </title>
+	<meta charset = "UTF-8" name = "viewport" content = "width = device-width"/>
+
+<!-- from mdl -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <title> mrio </title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+<!-- mdl links end here -->
+
+	<link rel = "stylesheet" href = "plugins/angular-material.css">
+	<!--link rel = "stylesheet" href = "mdl/icons.css"-->
+	<link rel = "stylesheet" href = "styles/font-awesome-4.4.0/css/font-awesome.min.css"/>
+	<link rel = "stylesheet" href = "styles/styles.css">
+	<link rel = "stylesheet" href = "styles/app.css">
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script src = "plugins/angular.js">				</script>
+	<script src = "scripts/imageUpload.js">			</script>
+	<script src = "plugins/ng-file-upload.js">		</script>
+	<script src = "plugins/angular-animate.js">		</script>
+	<script src = "plugins/angular-aria.js">		</script>
+	<script src = "plugins/angular-material.js">	</script>
+	<script src = "plugins/angular-touch.js">		</script>
+	<script src = "plugins/angular-ui-router.js">	</script>
+	<script src = "data/data.js">	 				</script>
+
+<script>var app = angular.module( 'App', [ 'ngTouch', 'ui.router', 'ngAnimate','ngMaterial', 'ngAria', 'ngFileUpload' ] );
+</script>
+
+	<script src = "scripts/upload.js"> </script>
+	<script src = "scripts/app.js"> 			</script>
+	<script src = "scripts/controllers/landCtrl.js"> 			</script>
+	<script src = "scripts/controllers/eventCtrl.js"> 			</script>
+
+	
+</head>
+<body ng-app = "App" class = "opanSans">
+	
+	<div ui-view> </div>
+
+</body>
+</html>

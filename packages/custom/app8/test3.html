@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Mrio 1 </title>
+	<meta charset = "UTF-8" name = "viewport" content = "width = device-width"/>
+
+<!-- from mdl -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> mrio </title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+    
+<!-- mdl links end here -->
+
+	<link rel = "stylesheet" href = "mdl/material.css">
+	<link rel = "stylesheet" href = "mdl/icons.css">
+	<link rel = "stylesheet" href = "styles/font-awesome-4.4.0/css/font-awesome.min.css"/>
+	<link rel = "stylesheet" href = "styles/styles.css">
+	<link rel = "stylesheet" href = "styles/app.css">
+	<script src = "mdl/material.js"> 			</script>
+	<script src = "plugins/angular.js">			</script>
+	<script src = "plugins/angular-touch.js">	</script>
+	<script src = "plugins/angular-ui-router.js">	</script>
+	<script src = "data/data.js">	 			</script>
+	<script src = "scripts/app.js"> 			</script>
+	<script src = "scripts/controllers/landCtrl.js"> 			</script>
+	<script src = "scripts/controllers/eventCtrl.js"> 			</script>
+
+</head>
+<body>
+<div ng-class = "class"> test </div>
+
+<div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+        <main class="mdl-layout__content">
+            <form action="#">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="username"/>
+                    <label class="mdl-textfield__label" for="username">Username</label>
+                </div>
+            </form>
+        </main>
+</div>
+
+
+<style>
+body {
+    text-align: center;
+}
+.mdl-layout {
+    align-items: center;
+  justify-content: center;
+}
+.mdl-layout__content {
+    padding: 24px;
+    flex: none;
+}
+.mdl-button {
+    margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+</style>
+</body>
+</html>

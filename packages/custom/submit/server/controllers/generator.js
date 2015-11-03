@@ -7,7 +7,9 @@ module.exports = function(app) {
   return {
     generateReport: function(Submit, app, req, res) {
       var bills = req.body.bills;
-      res.header('Content-Type', 'application/pdf');
+      res.header('Content-Type', 'application/octet-stream');
+      res.header('Content-Disposition: attachment; filename="Man"');
+      res.header('Content-Transfer-Encoding: binary');
       Submit.render('bills', {
           package: 'submit',
           bills: bills
@@ -15,16 +17,15 @@ module.exports = function(app) {
           conversion({
             html: html
           }, function(err, pdf) {
-            // //debugger;
-            // var buffer = pdf.stream; // Get buffer
-            // var arrayBuffer = new ArrayBuffer(buffer.length); // Start transforming Buffer to ArrayBuffer
-            // var views = new Uint8Array(arrayBuffer);
-            // for (var i = 0; i < buffer.length; ++i) {
-            //   views[i] = buffer[i];
-            // }
-            // res.type('arraybuffer');
-            // res.send(arrayBuffer);
-            pdf.stream.pipe(res);
+            var buffer = pdf.stream; // Get buffer
+            var arrayBuffer = new ArrayBuffer(buffer.length); // Start transforming Buffer to ArrayBuffer
+            var views = new Uint8Array(arrayBuffer);
+            for (var i = 0; i < buffer.length; ++i) {
+              views[i] = buffer[i];
+            }
+            res.type('arraybuffer');
+            res.send(arrayBuffer);
+            //pdf.stream.pipe(res);
           })
         })
         //bills.fetchBills(app, req, res, sendHTML);
