@@ -4,6 +4,10 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 var BillSchema = new Schema({
+	userid: {
+		type: String,
+		required: true
+	},
 	created: {
 		type: Date,
 	},

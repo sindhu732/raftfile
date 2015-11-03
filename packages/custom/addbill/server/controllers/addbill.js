@@ -61,6 +61,7 @@ module.exports = function(Addbill, database) {
 			//var imageData = JSON.stringify(req.files);
 			//console.log('Image data ' + imageData);
 			var newBill = new Bill({
+				userid: req.body.userid,
 				created: req.body.created,
 				billImage: req.body.billImage,
 				amount: req.body.amount,
@@ -78,7 +79,7 @@ module.exports = function(Addbill, database) {
 		getBills: function(req, res) {
 			// get bill details from database and send to client
 			// limit = 10 ?
-			Bill.find({claimed: false}).sort({date: 'desc'}).exec(function(err, results) {
+			Bill.find({userid: req.body.userid, claimed: false}).sort({date: 'desc'}).exec(function(err, results) {
 				if(err)
 					console.log('ERR! ', err);
 				//console.log(results)
@@ -88,9 +89,9 @@ module.exports = function(Addbill, database) {
 		claimBills: function(req, res) {
 			//console.log('got in');
 			console.log(req.body.fromDate);
-			Bill.find({claimed: false, date: {
-        				$gte: req.body.fromDate,
-        				$lte: req.body.toDate
+			Bill.find({userid: req.body.userid, claimed: false, date: {
+        															$gte: req.body.fromDate,
+        															$lte: req.body.toDate
         			}}).sort({date: 'desc'}).exec(function(err, results) {
 				if(err)
 					console.log('ERR!' + err);
