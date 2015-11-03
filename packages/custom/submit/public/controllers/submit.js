@@ -62,16 +62,15 @@ angular.module('mean.submit').controller('BillsController', ['$scope', 'Global',
         method: 'POST',
         data: {
           bills: $scope.bills
-        },
-        responseType: 'arraybuffer'
+        }
       }).success(function(data) {
 
-        console.log(data.length);
+        console.log(data.type);
         var URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
         var Blob = window.Blob;
 
         if (URL && Blob) {
-          console.log(data);
+          //console.log(data);
           var blob = new Blob(data, {
             type: 'application/octet-stream'
           });
