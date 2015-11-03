@@ -17,7 +17,6 @@ module.exports = function(app) {
           conversion({
             html: html
           }, function(err, pdf) {
-            debugger;
             var buffer = pdf.stream; // Get buffer
             var arrayBuffer = new ArrayBuffer(buffer.length); // Start transforming Buffer to ArrayBuffer
             var views = new Uint8Array(arrayBuffer);
