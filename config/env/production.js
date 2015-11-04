@@ -56,10 +56,10 @@ module.exports = {
         enabled: false
       },
       google: {
-        clientID: 'APP_ID',
-        clientSecret: 'APP_SECRET',
+        clientID: '648871424071-4d06o10ehs98u7ior6idm4i0a6biau30.apps.googleusercontent.com',
+        clientSecret: 'xk4rxUIIMkOa0RoitnDNQLbA',
         callbackURL: 'http://localhost:3000/api/auth/google/callback',
-        enabled: false
+        enabled: true
       },
       linkedin: {
         clientID: 'API_KEY',

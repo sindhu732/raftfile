@@ -38,9 +38,9 @@ module.exports = {
         enabled: false
       },
       google: {
-        clientID: 'DEFAULT_APP_ID',
-        clientSecret: 'APP_SECRET',
-        callbackURL: 'http://localhost:3000/submit/example/render',
+        clientID: '648871424071-4d06o10ehs98u7ior6idm4i0a6biau30.apps.googleusercontent.com',
+        clientSecret: 'xk4rxUIIMkOa0RoitnDNQLbA',
+        callbackURL: 'http://localhost:3000/api/auth/google/callback',
         enabled: true
       },
       linkedin: {
