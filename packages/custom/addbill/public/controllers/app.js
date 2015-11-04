@@ -59,17 +59,23 @@ app.controller('MainController', ['$scope','$http', 'Upload', function($scope, $
 		};
 
 
-	$scope.claim = function() {
-		var claimFilter = {
-			userid: $scope.getuserId,
-			fromDate: $scope.fromdate,
-			toDate: $scope.todate
+		$scope.claim = function() {
+			var claimFilter = {
+				userid: $scope.getuserId,
+				fromDate: $scope.fromdate,
+				toDate: $scope.todate
+			};
+			$http.post('/api/addbill/claim', claimFilter).success(function(response) {
+				console.log(response);
+				$scope.bills = response.unclaimedBills;
+			})
 		};
-		$http.post('/api/addbill/claim', claimFilter).success(function(response) {
-			console.log(response);
-			$scope.bills = response.unclaimedBills;
-		})
-	}
+
+		$scope.deletebill = function(billid) {
+			$http.post('/api/addbill/deletebill', billid).success(function() {
+				console.log('Deleted bill ');
+			})
+		}
 	
 }]);
 

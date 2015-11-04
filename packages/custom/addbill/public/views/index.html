@@ -11,7 +11,9 @@
 
 	<br>
 		{{ newbill }}
-		{{ getuserId }}
+	<br>
+
+	<button type="submit" ng-click="delete(billid)">Delete Bill</button>
 	<br>
 
     Claim Bills <br>
@@ -20,6 +22,7 @@
 	<button type="submit" ng-click="claim()">Claim Bills</button>
 	<br>
 	<div ng-repeat="bill in bills | filter: {claimed: false}" ng-init="$scope.total = total + bill.amount">
+		{{ bill._id }}
 		{{ bill.billImage }}
 		{{ bill.amount }} 
 		{{ bill.detail }}

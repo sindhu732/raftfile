@@ -98,6 +98,15 @@ module.exports = function(Addbill, database) {
 				//console.log(res.header('Access-Control-Allow-Origin'));
 				res.json({'unclaimedBills': results});
 			});
-		}
+		},
+
+		deleteBill: function(req) {
+			Bill.remove({bill_id: req.body.billid}).exec(function(err, results) {
+				if(err)
+					console.log('Error deleting bill! ' + err);
+				else
+					console.log('Deleted Bill');
+			});
 		}
 	}
+}

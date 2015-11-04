@@ -38,7 +38,13 @@ module.exports = function(Addbill, app, auth, database) {
   app.post('/api/addbill/claim', function(req, res) {
     console.log("Claim Bills");
     addbill.claimBills(req, res);
-  })
+  });
+
+  app.post('/api/addbill/deletebill', function(req) {
+    console.log("To delete Bill");
+    addbill.deleteBills(req);
+  });
+
 
   app.get('/api/addbill/example/render', function(req, res, next) {
     Addbill.render('index', {
