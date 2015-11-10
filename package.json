@@ -4,11 +4,11 @@
   "version": "0.1.0",
   "private": false,
   "author": "Moonraft <vineeth@moonraft.com>",
-  "contributors": "https://github.com/linnovate/mean/graphs/contributors",
+  "contributors": "https://github.com/sindhu732/raftfile/graphs/contributors",
   "mean": "0.5.5",
   "repository": {
     "type": "git",
-    "url": "https://vineethvijayan@bitbucket.org/vineethvijayan/mriob.g"
+    "url": "https://github.com/sindhu732/raftfile.git"
   },
   "scripts": {
     "start": "node server",
